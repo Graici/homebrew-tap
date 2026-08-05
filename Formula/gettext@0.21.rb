@@ -1,8 +1,8 @@
 class GettextAT021 < Formula
   desc "GNU internationalization (i18n) and localization (l10n) library"
   homepage "https://www.gnu.org/software/gettext/"
-  url "https://ftp.gnu.org/gnu/gettext/gettext-0.21.1.tar.gz"
-  mirror "https://ftpmirror.gnu.org/gettext/gettext-0.21.1.tar.gz"
+  url "https://ftpmirror.gnu.org/gnu/gettext/gettext-0.21.1.tar.gz"
+  mirror "https://ftp.gnu.org/gnu/gettext/gettext-0.21.1.tar.gz"
   mirror "http://ftp.gnu.org/gnu/gettext/gettext-0.21.1.tar.gz"
   sha256 "e8c3650e1d8cee875c4f355642382c1df83058bd5a11ee8555c0cf276d646d45"
   license "GPL-3.0-or-later"
@@ -34,7 +34,7 @@ class GettextAT021 < Formula
       # your system somehow.
       "--with-included-gettext"
     else
-      "--with-libxml2-prefix=#{Formula["libxml2"].opt_prefix}"
+      "--with-libxml2-prefix=#{formula_opt_prefix("libxml2")}"
     end
 
     # Sonoma iconv() has a regression w.r.t. transliteration, which happens to
