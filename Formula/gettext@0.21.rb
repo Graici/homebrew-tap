@@ -1,3 +1,6 @@
+# Pinned to 0.21.1 so local dev machines and CI resolve msgfmt/xgettext to the same
+# version. Extracted via `brew extract` from homebrew/core. See platform/server/Brewfile
+# in Graici/platform for where this is consumed.
 class GettextAT021 < Formula
   desc "GNU internationalization (i18n) and localization (l10n) library"
   homepage "https://www.gnu.org/software/gettext/"
