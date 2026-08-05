@@ -49,7 +49,10 @@ jobs:
       - run: brew test-bot --only-setup
 
       - run: brew test-bot --only-tap-syntax
-      - run: brew test-bot --only-formulae
+      # --skip-online-checks: this tap intentionally pins old GNU release archives
+      # (e.g. gettext@0.21) that are no longer served by the rotating GNU mirror
+      # network, so brew audit's online reachability check gives false positives.
+      - run: brew test-bot --only-formulae --skip-online-checks
         if: github.event_name == 'pull_request'
 
       - name: Upload bottles as artifact
