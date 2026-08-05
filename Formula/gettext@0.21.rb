@@ -10,6 +10,13 @@ class GettextAT021 < Formula
   sha256 "e8c3650e1d8cee875c4f355642382c1df83058bd5a11ee8555c0cf276d646d45"
   license "GPL-3.0-or-later"
 
+  bottle do
+    root_url "https://github.com/Graici/homebrew-tap/releases/download/gettext@0.21-0.21.1"
+    rebuild 1
+    sha256 arm64_tahoe:  "f4d942a785d3d492a15990bc24351341e2b0e86bf43241e20899ea5a78984392"
+    sha256 x86_64_linux: "977cba445ad3dd9977268453ddb8f118c0442deb9d7d5d9e674045844ebb8fbf"
+  end
+
   uses_from_macos "libxml2"
   uses_from_macos "ncurses"
 
